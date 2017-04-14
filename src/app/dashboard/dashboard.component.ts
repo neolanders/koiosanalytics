@@ -1,6 +1,8 @@
 import { Component, OnInit }    from '@angular/core';
-import { Router }               from '@angular/router';
+import { Router } from '@angular/router';
+import { IonicPage } from "ionic-angular";
 
+@IonicPage()
 @Component({
     templateUrl: './dashboard.component.html'
 })

@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
 import { AuthService } from '../shared/services/auth.service';
+import { IonicPage } from "ionic-angular";
 
+@IonicPage()
 @Component({
   selector: './app-protected',
   templateUrl: 'protected.component.html'

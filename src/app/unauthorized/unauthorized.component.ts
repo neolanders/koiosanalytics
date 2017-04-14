@@ -3,8 +3,9 @@ import { Location } from '@angular/common';
 
 import { AuthService } from '../shared/services/auth.service';
 import { Network } from '@ionic-native/network';
-import { ToastController } from "ionic-angular";
+import { ToastController, IonicPage } from "ionic-angular";
 
+@IonicPage()
 @Component({
   selector: 'app-unauthorized',
   templateUrl: './unauthorized.component.html'

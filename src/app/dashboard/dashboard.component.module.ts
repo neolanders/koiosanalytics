@@ -7,13 +7,13 @@ import { DashboardComponent }       from './dashboard.component';
 import { DashboardRoutingModule }   from './dashboard-routing.module';
 
 
-import { IonicModule } from 'ionic-angular';
+import { IonicModule, IonicPageModule } from 'ionic-angular';
 
 @NgModule({
     imports: [
         CommonModule,
         DashboardRoutingModule,
-        //IonicModule,
+        IonicPageModule.forChild(DashboardComponent),
         ChartsModule,
         LayoutModule
     ],

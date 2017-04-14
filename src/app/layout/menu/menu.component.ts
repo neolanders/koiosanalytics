@@ -6,8 +6,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 
 @Component({
   selector: 'seed-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  templateUrl: 'menu.component.html',
   animations: [
     trigger('leftMenuState', [
       state('fixed', style({
