@@ -2,8 +2,8 @@
 version: '2'
 
 services:
-  angular-pwa-seed:
-    image: angular-pwa-seed:latest
+  koiosanalytics:
+    image: koiosanalytics:latest
     build:
       context: .
       dockerfile: Dockerfile
