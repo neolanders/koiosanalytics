@@ -10,7 +10,10 @@
   },
   "scripts": {
     "start": "npm run ng -- serve --port 5555",
-    "serve": "npm run concurrently -- --kill-others \"npm run build.watch\" \"npm run wait && npm run ionic.serve\"",
+    "serve": "http-server",
+    "heroku-prebuild": "npm install -g http-server",
+    "heroku-postbuild": "npm uninstall --save angular-cli && npm install --save @angular/cli@1.0.0 && ng version && ng build && mv dist/* .",
+    "serve.local": "npm run concurrently -- --kill-others \"npm run build.watch\" \"npm run wait && npm run ionic.serve\"",
     "start.mobile": "npm run concurrently -- --kill-others \"npm run build.watch\" \"npm run wait && npm run ionic.livesync\"",
     "serve.mobile": "npm run start.mobile",
     "docker.build": "docker build -f Dockerfile -t koiosanalytics:latest .",
