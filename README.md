@@ -198,3 +198,8 @@ More details at: [Angular CLI](https://cli.angular.io/) and [Ionic](http://ionic
 ### Testing:
 
 [![BrowserStack](https://image.ibb.co/hKLrgQ/rsz_2browserstack_logo_600x315.png)](https://www.browserstack.com) - Testing against multiple browsers/platforms
+
+
+### DEPLOY ON HEROKU:
+
+git push heroku master

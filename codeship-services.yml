@@ -1,0 +1,4 @@
+koiosanalytics:
+  build:
+    image: koiosanalytics:latest
+    dockerfile_path: Dockerfile

@@ -13,4 +13,4 @@ EXPOSE 5555
 
 
 # TO RUN
-# docker run -p 5555:5555 --name angular-pwa-seed-container --rm -i -t angular-pwa-seed bash
+# docker run -p 5555:5555 --name koiosanalytics-container --rm -i -t koiosanalytics bash
