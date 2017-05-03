@@ -11,6 +11,7 @@
   "scripts": {
     "start": "npm run ng -- serve --port 5555",
     "serve": "http-server",
+    "codeship.predeploy": "npm cache clear && npm uninstall -g @angular/cli && npm install -g @angular/cli@latest && ng version && npm install",
     "heroku-prebuild": "npm install -g http-server",
     "heroku-postbuild": "npm uninstall --save angular-cli && npm install --save @angular/cli@1.0.0 && ng version && ng build && mv dist/* .",
     "serve.local": "npm run concurrently -- --kill-others \"npm run build.watch\" \"npm run wait && npm run ionic.serve\"",

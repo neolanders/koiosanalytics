@@ -1,2 +1,17 @@
-- service: koiosanalytics
-  command: npm run start
+- type: serial
+  steps:
+  - type: parallel
+    steps:
+    - name: predeploy
+      service: koiosanalytics
+      command: npm run codeship.predeploy
+    - name: lint
+      service: koiosanalytics
+      command: npm run lint
+    - name: tests
+      service: koiosanalytics
+      command: npm run test
+  - name: deploy
+    tag: master
+    service: deploy
+    command: koiosanalytics deploy /deploy koiosanalytics

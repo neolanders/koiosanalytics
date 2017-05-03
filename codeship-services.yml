@@ -1,4 +1,16 @@
-koiosanalytics:
-  build:
+version: '2'
+services:
+  koiosanalytics:
     image: koiosanalytics:latest
-    dockerfile_path: Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 5555:5555
+  deploy:
+    image: koiosanalytics
+    # encrypted_env_file: deployment.env.encrypted
+    volumes:
+      - ./:/deploy
