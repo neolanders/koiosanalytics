@@ -8,14 +8,14 @@ export const environment = {
   production: false,
   authentication: {
     authority: 'https://accounts.google.com',
-    client_id: '929544282709-8mkof7adolh13fnualb2f4f176mjd2ot.apps.googleusercontent.com',
-    client_secret: '2F88K5gbFOUhUuhSl7Z-XbD9',
-    redirect_uri: 'http://localhost:5555/callback.html',
-    post_logout_redirect_uri: 'http://localhost:5555',
+    client_id: '423462593901-bop3o1jlsjgn807caoikjds8drr54f6d.apps.googleusercontent.com',
+    client_secret: 'G1C2A7a_X2MimIIaucvDX9OB',
+    redirect_uri: 'https://localhost:5555/callback.html',
+    post_logout_redirect_uri: 'https://localhost:5555',
     response_type: 'code id_token token',
     scope: 'openid profile',
 
-    silent_redirect_uri: 'http://localhost:5555/silentrefresh.html',
+    silent_redirect_uri: 'https://localhost:5555/silentrefresh.html',
     automaticSilentRenew: true,
     //silentRequestTimeout:10000,
 

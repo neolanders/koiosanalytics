@@ -203,3 +203,11 @@ More details at: [Angular CLI](https://cli.angular.io/) and [Ionic](http://ionic
 ### DEPLOY ON HEROKU:
 
 git push heroku master
+
+### PIPELINE AND TEST USING CODEFRESH (Support docker)
+
+https://g.codefresh.io/environments/
+
+### SSO USING GOOGLE AUTH2:
+
+https://console.developers.google.com/apis/credentials?project=koiosanalytics-166502
