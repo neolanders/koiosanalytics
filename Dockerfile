@@ -14,7 +14,7 @@ COPY . /usr/src/app
 
 #Lanch server
 EXPOSE 5443
-CMD ["npm", "run", "local"]
+CMD ["npm", "run", "dev"]
 
 #CMD npm run start
 

@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "npm run ng -- serve --port 5555",
-    "local": "npm run ng -- serve --e=dev --dev --host 0.0.0.0 --port 5443 --ssl true --ssl-key ./certs/dvlldk01b.key --ssl-cert ./certs/dvlldk01b.crt",
+    "local": "npm run ng -- serve --e=source --source --host 0.0.0.0 --port 5443 --ssl true --ssl-key ./certs/dvlldk01b.key --ssl-cert ./certs/dvlldk01b.crt",
+    "dev": "npm run ng -- serve --e=dev --dev --host 0.0.0.0 --port 5443 --ssl true --ssl-key ./certs/dvlldk01b.key --ssl-cert ./certs/dvlldk01b.crt",
     "serve": "http-server",
     "codeship.predeploy": "npm cache clear && npm uninstall -g @angular/cli && npm install -g @angular/cli@latest && ng version && npm install",
     "heroku-prebuild": "npm install -g http-server",

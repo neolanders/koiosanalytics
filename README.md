@@ -204,9 +204,13 @@ More details at: [Angular CLI](https://cli.angular.io/) and [Ionic](http://ionic
 
 git push heroku master
 
-### PIPELINE AND TEST USING CODEFRESH (Support docker)
+
+### PIPELINE AND TEST AND DEPLOY USING CODEFRESH (Support docker)
 
 https://g.codefresh.io/environments/
+
+
+https://cf-aue1-docker-node-0053.cf-cd.com:32940/#/dashboard (URL DEPLOY)
 
 ### SSO USING GOOGLE AUTH2:
 
@@ -215,3 +219,5 @@ https://console.developers.google.com/apis/credentials?project=koiosanalytics-16
 ### RUN PROJECT:
 
 npm run ionic.serve
+
+

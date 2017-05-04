@@ -1,28 +1,17 @@
-// {
-//   "web": {
-//   "client_id": "423462593901-bop3o1jlsjgn807caoikjds8drr54f6d.apps.googleusercontent.com",
-//     "project_id": "koiosanalytics-166502",
-//     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-//     "token_uri": "https://accounts.google.com/o/oauth2/token",
-//     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-//     "client_secret": "G1C2A7a_X2MimIIaucvDX9OB",
-//     "redirect_uris": [
-//     "https://localhost:5443/callback.html"
-//   ],
-//     "javascript_origins": [
-//     "https://localhost:5443"
-//   ]
-// }
-// }
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `angular-cli.json`.
+
 
 export const environment = {
-  production: true,
+  production: false,
   authentication: {
     authority: 'https://accounts.google.com',
     client_id: '423462593901-bop3o1jlsjgn807caoikjds8drr54f6d.apps.googleusercontent.com',
     client_secret: 'G1C2A7a_X2MimIIaucvDX9OB',
     redirect_uri: 'https://cf-aue1-docker-node-0053.cf-cd.com:32940/callback.html',
-    post_logout_redirect_uri: 'https://cf-aue1-docker-node-0053.cf-cd.com:32940',
+    post_logout_redirect_uri: 'https://cf-aue1-docker-node-0053.cf-cd.com:32940/',
     response_type: 'code id_token token',
     scope: 'openid profile',
 
