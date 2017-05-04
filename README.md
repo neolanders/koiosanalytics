@@ -211,3 +211,7 @@ https://g.codefresh.io/environments/
 ### SSO USING GOOGLE AUTH2:
 
 https://console.developers.google.com/apis/credentials?project=koiosanalytics-166502
+
+### RUN PROJECT:
+
+npm run ionic.serve

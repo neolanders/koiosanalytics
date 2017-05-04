@@ -9,7 +9,7 @@ RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 EXPOSE 5555
-# CMD npm run start
+CMD npm run start
 
 
 # TO RUN
