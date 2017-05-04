@@ -8,8 +8,15 @@ RUN cd /tmp && npm i -g --unsafe-perm @angular/cli cordova ionic@beta typescript
 RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-EXPOSE 5555
-CMD npm run start
+
+
+#RUN npm run build-dev
+
+#Lanch server
+EXPOSE 5443
+CMD ["npm", "run", "local"]
+
+#CMD npm run start
 
 
 # TO RUN
