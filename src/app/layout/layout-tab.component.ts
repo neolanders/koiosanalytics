@@ -8,14 +8,14 @@ import { Router } from "@angular/router";
 export class TabNone { }
 
 @Component({
-  selector: 'seed-layout [type="tab"]',
+  selector: 'koios-layout [type="tab"]',
   template:
   `
-    <seed-header [showLeftMenuButton]="false" [showRightMenuButton]="true">
+    <koios-header [showLeftMenuButton]="false" [showRightMenuButton]="true">
       <ion-tabs [hidden]="showToolbarTab" layout-tabs tabsLayout="icon-top" tabsPlacement="top">
         <ion-tab [root]="dummyTab" layout-tab *ngFor="let menuItem of menuItems; let i = index;" (ionSelect)="navigateTo(menuItem.link)" tabTitle="{{menuItem.title}}" tabIcon="{{menuItem.icon}}"></ion-tab>
       </ion-tabs>
-    </seed-header>
+    </koios-header>
 
     <div [hidden]="true">
       <ng-content select="[menu-items]"></ng-content>

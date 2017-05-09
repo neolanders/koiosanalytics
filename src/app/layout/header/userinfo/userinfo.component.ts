@@ -7,7 +7,7 @@ import { Network } from '@ionic-native/network';
 
 
 @Component({
-  selector: 'seed-userinfo',
+  selector: 'koios-userinfo',
   templateUrl: './userinfo.component.html',
   styleUrls: ['./userinfo.component.scss']
 })

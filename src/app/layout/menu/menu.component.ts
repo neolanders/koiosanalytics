@@ -5,28 +5,28 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Renderer, Appl
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
-  selector: 'seed-menu',
-  templateUrl: './menu.component.html',
-  animations: [
-    trigger('leftMenuState', [
-      state('fixed', style({
-        transformOrigin: 'center', transform: 'rotate(-10deg)'
-      })),
-      state('unfixed', style({
-        transformOrigin: 'center', transform: 'rotate(10deg)'
-      })),
-      transition('fixed <=> unfixed', animate('50ms ease-in'))
-    ]),
-    trigger('rightMenuState', [
-      state('fixed', style({
-        transformOrigin: 'center', transform: 'rotate(-10deg)'
-      })),
-      state('unfixed', style({
-        transformOrigin: 'center', transform: 'rotate(10deg)'
-      })),
-      transition('fixed <=> unfixed', animate('50ms ease-in'))
-    ])
-  ]
+  selector: 'koios-menu',
+  templateUrl: './menu.component.html'
+  // animations: [
+  //   trigger('leftMenuState', [
+  //     state('fixed', style({
+  //       transformOrigin: 'center', transform: 'rotate(-10deg)'
+  //     })),
+  //     state('unfixed', style({
+  //       transformOrigin: 'center', transform: 'rotate(10deg)'
+  //     })),
+  //     transition('fixed <=> unfixed', animate('50ms ease-in'))
+  //   ]),
+  //   trigger('rightMenuState', [
+  //     state('fixed', style({
+  //       transformOrigin: 'center', transform: 'rotate(-10deg)'
+  //     })),
+  //     state('unfixed', style({
+  //       transformOrigin: 'center', transform: 'rotate(10deg)'
+  //     })),
+  //     transition('fixed <=> unfixed', animate('50ms ease-in'))
+  //   ])
+  // ]
 })
 export class MenuComponent implements OnInit, AfterViewInit {
 
@@ -52,24 +52,21 @@ export class MenuComponent implements OnInit, AfterViewInit {
   whenSplitPaneShow(width: number) {
     if (this.platform.width() < width) {
       return false;
-     }
-
+    }
     let whenShow = true;
     if (this.leftMenuService.isFixed) {
       whenShow = true;
     } else {
       whenShow = false;
     }
-    return whenShow;
-
+    return false; // whenShow;
   }
 
 
   whenRightSplitPaneShow(width: number) {
     if (this.platform.width() < width) {
       return false;
-     }
-
+    }
     let whenShow = true;
     if (this.rightMenuService.isFixed) {
       whenShow = true;
@@ -77,10 +74,7 @@ export class MenuComponent implements OnInit, AfterViewInit {
       whenShow = false;
     }
     return whenShow;
-
   }
-
-
 
   get leftMenuState() {
     if (this.leftMenuService.isFixed) { return 'fixed'; } else { return 'unfixed'; }

@@ -1,15 +1,15 @@
-<div>
-  <div *ngIf="!!image; else noImageBlock">
-    <img [src]="image" height="100" width="100" />
-  </div>
+<div class="user-info">
+  <!--<div *ngIf="!!image; else noImageBlock">-->
+    <!--<img [src]="image" height="100" width="100" />-->
+  <!--</div>-->
   <ng-template #noImageBlock>
     <span><ion-icon name="person"></ion-icon></span>
   </ng-template>
-  <div>{{name}}</div>
-  <div *ngIf="isLoggedIn; else loginBlock">
+  <span>{{name}}</span>
+  <span *ngIf="isLoggedIn; else loginBlock">
     <button ion-button small color="secondary" (click)="logout()">Logout</button>
-  </div>
+  </span>
   <ng-template #loginBlock>
     <button ion-button small color="primary" (click)="login()">Login</button>
   </ng-template>
-</div> 
+</div>

@@ -6,6 +6,6 @@ export class MyAngularAppPage {
   }
 
   getParagraphText() {
-    return element(by.css('seed-root h1')).getText();
+    return element(by.css('koios-root h1')).getText();
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'seed-enterpriseinfo',
+  selector: 'koios-enterpriseinfo',
   templateUrl: './enterpriseinfo.component.html',
   styleUrls: ['./enterpriseinfo.component.scss']
 })

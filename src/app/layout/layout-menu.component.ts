@@ -3,15 +3,15 @@ import { Component, OnInit, Input } from '@angular/core';
 import { LayoutComponent } from "./layout.component";
 
 @Component({
-  selector: 'seed-layout [type="menu"]',
+  selector: 'koios-layout [type="menu"]',
   template:
   `
-  <seed-menu>
-    <div seed-menu-items>
+  <koios-menu>
+    <div koios-menu-items>
       <ng-content select="[menu-items]"></ng-content>
     </div>
     <ng-content></ng-content>
-  </seed-menu>
+  </koios-menu>
   `
 })
 export class LayoutMenuComponent extends LayoutComponent {

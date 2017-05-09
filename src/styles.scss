@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "./theme/theme";
+@import "./theme/mixins";
 
 body{
-  background-color: #eaeaea;
+  // background-color: #1a1c1d;
+  // @include bg("mainBg.jpg", transparent);
 }
 
 ion-menu ion-content {
@@ -124,10 +126,14 @@ ion-menu {
 
 //Animation on page change (replace with https://github.com/angular/angular/issues/9845#issuecomment-235799008, once is solved)
 #appcontent * {
+  min-height: 430px;
   animation-duration: 500ms;
   opacity: 0;
   animation-name: fadeIn;
   animation-fill-mode: forwards;
+  opacity: 0.8;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  @include bg("mainBg.jpg", transparent);
 }
 
 @keyframes fadeIn {

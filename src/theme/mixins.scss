@@ -1,0 +1,3 @@
+@mixin bg($relativeUrl, $color) {
+  background: $color url("/assets/img/" + $relativeUrl);
+}

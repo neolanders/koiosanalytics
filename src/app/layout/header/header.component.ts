@@ -5,7 +5,7 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input, AfterCo
 
 
 @Component({
-  selector: 'seed-header',
+  selector: 'koios-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {

@@ -20,7 +20,16 @@ import { TabComponent } from './tab/tab.component';
     IonicModule,
     RouterModule
   ],
-  declarations: [TabNone, LayoutComponent, LayoutMenuComponent, LayoutTabComponent, HeaderComponent, MenuComponent, UserinfoComponent, SysteminfoComponent, EnterpriseinfoComponent, BreadcrumbsComponent],
+  declarations: [TabNone,
+    LayoutComponent,
+    LayoutMenuComponent,
+    LayoutTabComponent,
+    HeaderComponent,
+    MenuComponent,
+    UserinfoComponent,
+    SysteminfoComponent,
+    EnterpriseinfoComponent,
+    BreadcrumbsComponent],
   providers: [LeftMenuService, RightMenuService],
   exports: [LayoutComponent, LayoutMenuComponent, LayoutTabComponent, HeaderComponent, MenuComponent],
   entryComponents: [UserinfoComponent, TabNone]

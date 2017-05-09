@@ -9,6 +9,6 @@ describe('my-angular-app App', () => {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('seed works!');
+    expect(page.getParagraphText()).toEqual('koios works!');
   });
 });
