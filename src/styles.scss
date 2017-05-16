@@ -142,10 +142,13 @@ ion-menu {
 }
 
 .main-content {
+  position: initial !important;
   padding: 20px;
   background-color: white;
 }
-
+.content-md {
+  background: transparent;
+}
 
 @keyframes fadeIn {
 from {

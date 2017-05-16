@@ -22,13 +22,13 @@ import { LayoutModule } from './layout/layout.module';
 import { Network } from '@ionic-native/network';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ParallaxHeader } from './shared/components/parallax-header/parallax-header.directive';
+import { ParallaxHeaderDirective } from './shared/components/parallax-header/parallax-header.directive';
 
 
 @NgModule({
   declarations: [
     MyApp,
-    ParallaxHeader
+    ParallaxHeaderDirective
   ],
   imports: [
     HttpModule,
