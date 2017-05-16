@@ -9,9 +9,7 @@ import { Router } from "@angular/router";
 export class MenuItemComponent implements OnInit {
 
   @Input() icon?: string;
-
   @Input() link?: any;
-
   @Input() title: string;
 
 

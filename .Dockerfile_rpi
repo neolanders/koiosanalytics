@@ -1,0 +1,25 @@
+REMOVE ALL LINES:
+:1,$d
+
+
+
+# FROM resin/rpi-raspbian:jessie
+FROM hypriot/rpi-node:latest
+
+# prepare a user which runs everything locally! - required in child images!
+RUN useradd --user-group --create-home --shell /bin/false app
+
+ARG registry=https://registry.npmjs.org/
+LABEL Name=koiosanalytics Version=0.1.0
+COPY package.json /tmp/package.json
+
+RUN npm config set registry ${registry}
+RUN cd /tmp && npm i -g --unsafe-perm @angular/cli cordova ionic@beta typescript sleep-ms concurrently mkdirp && npm install --unsafe-perm
+RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+
+
+#Launch server
+EXPOSE 5443
+CMD ["npm", "run", "dev"]

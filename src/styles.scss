@@ -126,15 +126,26 @@ ion-menu {
 
 //Animation on page change (replace with https://github.com/angular/angular/issues/9845#issuecomment-235799008, once is solved)
 #appcontent * {
-  min-height: 430px;
+  // height: 100vh;
   animation-duration: 500ms;
   opacity: 0;
   animation-name: fadeIn;
   animation-fill-mode: forwards;
   opacity: 0.8;
   filter: alpha(opacity=50); /* For IE8 and earlier */
-  @include bg("mainBg.jpg", transparent);
+  // @include bg("bgstats.jpg", transparent);
 }
+
+.header-image {
+  background-image: url(https://ununsplash.imgix.net/photo-1421091242698-34f6ad7fc088?fit=crop&fm=jpg&h=650&q=75&w=950);
+  height: 40vh;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: white;
+}
+
 
 @keyframes fadeIn {
 from {

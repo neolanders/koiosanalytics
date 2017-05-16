@@ -11,21 +11,21 @@ export class TabNone { }
   selector: 'koios-layout [type="tab"]',
   template:
   `
-    <koios-header [showLeftMenuButton]="false" [showRightMenuButton]="true">
-      <ion-tabs [hidden]="showToolbarTab" layout-tabs tabsLayout="icon-top" tabsPlacement="top">
-        <ion-tab [root]="dummyTab" layout-tab *ngFor="let menuItem of menuItems; let i = index;" (ionSelect)="navigateTo(menuItem.link)" tabTitle="{{menuItem.title}}" tabIcon="{{menuItem.icon}}"></ion-tab>
-      </ion-tabs>
-    </koios-header>
+    <!--<koios-header [showLeftMenuButton]="false" [showRightMenuButton]="true">-->
+      <!--<ion-tabs [hidden]="showToolbarTab" layout-tabs tabsLayout="icon-top" tabsPlacement="top">-->
+        <!--<ion-tab [root]="dummyTab" layout-tab *ngFor="let menuItem of menuItems; let i = index;" (ionSelect)="navigateTo(menuItem.link)" tabTitle="{{menuItem.title}}" tabIcon="{{menuItem.icon}}"></ion-tab>-->
+      <!--</ion-tabs>-->
+    <!--</koios-header>-->
 
     <div [hidden]="true">
       <ng-content select="[menu-items]"></ng-content>
     </div>
 
-    <ion-toolbar [hidden]="!showToolbarTab">
-      <ion-tabs tabsLayout="icon-top" tabsPlacement="top">
-        <ion-tab [root]="dummyTab" *ngFor="let menuItem of menuItems; let i = index;" (ionSelect)="navigateTo(menuItem.link)" tabTitle="{{menuItem.title}}" tabIcon="{{menuItem.icon}}"></ion-tab>
-      </ion-tabs>
-    </ion-toolbar>
+    <!--<ion-toolbar [hidden]="!showToolbarTab">-->
+      <!--<ion-tabs tabsLayout="icon-top" tabsPlacement="top">-->
+        <!--<ion-tab [root]="dummyTab" *ngFor="let menuItem of menuItems; let i = index;" (ionSelect)="navigateTo(menuItem.link)" tabTitle="{{menuItem.title}}" tabIcon="{{menuItem.icon}}"></ion-tab>-->
+      <!--</ion-tabs>-->
+    <!--</ion-toolbar>-->
 
     <ion-content main #content>
       <div padding>

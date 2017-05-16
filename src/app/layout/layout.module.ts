@@ -10,9 +10,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { UserinfoComponent } from './header/userinfo/userinfo.component';
-import { SysteminfoComponent } from './header/systeminfo/systeminfo.component';
-import { EnterpriseinfoComponent } from './header/enterpriseinfo/enterpriseinfo.component';
-import { TabComponent } from './tab/tab.component';
+import { MenuItemComponent } from '../shared/components/menu-item/menu-item.component';
+// import { TabComponent } from './tab/tab.component';
 
 @NgModule({
   imports: [
@@ -20,18 +19,25 @@ import { TabComponent } from './tab/tab.component';
     IonicModule,
     RouterModule
   ],
-  declarations: [TabNone,
+  declarations: [
+    TabNone,
+    MenuItemComponent,
     LayoutComponent,
     LayoutMenuComponent,
     LayoutTabComponent,
     HeaderComponent,
     MenuComponent,
     UserinfoComponent,
-    SysteminfoComponent,
-    EnterpriseinfoComponent,
     BreadcrumbsComponent],
   providers: [LeftMenuService, RightMenuService],
-  exports: [LayoutComponent, LayoutMenuComponent, LayoutTabComponent, HeaderComponent, MenuComponent],
+  exports: [
+    LayoutComponent,
+    LayoutMenuComponent,
+    LayoutTabComponent,
+    HeaderComponent,
+    MenuComponent,
+    MenuItemComponent
+  ],
   entryComponents: [UserinfoComponent, TabNone]
 })
 export class LayoutModule { }

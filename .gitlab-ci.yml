@@ -1,0 +1,42 @@
+image: node:5
+
+stages:
+  - test
+  - build
+
+cache:
+  key: "$CI_PROJECT_NAME/$CI_BUILD_REF_NAME"
+  paths:
+    - ./node_modules/
+
+before_script:
+  - export PATH=$PATH:./node_modules/.bin/
+  - npm install
+
+tslint_job:
+  stage: test
+  tags:
+    - linux
+    - docker
+  script:
+    - ng lint
+
+test_job:
+  stage: test
+  tags:
+    - linux
+    - docker
+  script:
+    - karma start --browsers PhantomJS --single-run
+
+build_job:
+  stage: build
+  tags:
+    - linux
+    - docker
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist/*
+  script:
+    - ng build --aot-prod --bh "./"

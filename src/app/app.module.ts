@@ -22,12 +22,13 @@ import { LayoutModule } from './layout/layout.module';
 import { Network } from '@ionic-native/network';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { MenuItemComponent } from './shared/components/menu-item/menu-item.component';
+import { ParallaxHeader } from './shared/components/parallax-header/parallax-header.directive';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    MenuItemComponent
+    ParallaxHeader
   ],
   imports: [
     HttpModule,
@@ -38,9 +39,7 @@ import { MenuItemComponent } from './shared/components/menu-item/menu-item.compo
     AppRoutingModule,
     Ng2BootstrapModule,
     ChartsModule,
-
     IonicModule.forRoot(MyApp),
-
     LayoutModule
   ],
   bootstrap: [IonicApp],

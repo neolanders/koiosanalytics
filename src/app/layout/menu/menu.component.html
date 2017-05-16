@@ -4,25 +4,20 @@
       <ion-toolbar>
         <ion-title>Pages</ion-title>
         <!--<span>-->
-          <!--<a class="right" invisible-to="mobile" (click)="fixMenu()">-->
-            <!--<span [@leftMenuState]="leftMenuState" class="glyphicon glyphicon-pushpin toolbar-title-md" aria-hidden="true"></span>-->
+        <!--<a class="right" invisible-to="mobile" (click)="fixMenu()">-->
+        <!--<span [@leftMenuState]="leftMenuState" class="glyphicon glyphicon-pushpin toolbar-title-md" aria-hidden="true"></span>-->
         <!--</a>-->
         <!--</span>-->
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ng-content select="[koios-menu-items]"></ng-content>
-      </ion-list>
-      <ion-list>
-        <!--<ion-item>-->
-          <!--<koios-userinfo></koios-userinfo>-->
-        <!--</ion-item>-->
+        <!--<ng-content select="[koios-menu-items]"></ng-content>-->
         <ion-item>
-          <koios-systeminfo></koios-systeminfo>
+          Sample Menu1
         </ion-item>
         <ion-item>
-          <koios-enterpriseinfo></koios-enterpriseinfo>
+          Sample Menu2
         </ion-item>
       </ion-list>
     </ion-content>
@@ -30,13 +25,8 @@
   <ion-split-pane [when]="whenRightSplitPaneShow(768)">
     <!-- when="(min-width: 1440px)" -->
     <ion-content main #content>
-      <koios-header>
-      </koios-header>
+      <koios-header></koios-header>
       <div id="appcontent">
-        <!-- Breadcrumb -->
-        -----
-        <breadcrumbs></breadcrumbs>
-        -----
         <div padding>
           <ng-content></ng-content>
         </div>

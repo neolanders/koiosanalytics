@@ -24,6 +24,10 @@ export const routes: Routes = [
                 loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
             },
             {
+              path: 'about',
+              loadChildren: 'app/about/about.module#AboutModule'
+            },
+            {
                 path: 'protected',
                 loadChildren: 'app/protected/protected.module#ProtectedModule'
             },
