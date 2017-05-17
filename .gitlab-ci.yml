@@ -1,4 +1,4 @@
-mage: node:latest
+image: node:6.9.4
 
 before_script:
   - apt-get --quiet update --yes
@@ -10,7 +10,7 @@ before_script:
   - apt-get --quiet install -y nodejs
   - apt-get --quiet update --yes
   - npm -v
-  - npm install -g @angular/cli@latest
+  - npm install -g angular-cli
 
 stages:
   - test
