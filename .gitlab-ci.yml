@@ -13,18 +13,7 @@ before_script:
   - npm install -g angular-cli
 
 stages:
-  - test
   - deploy
-
-#deploy debug
-test:
-  stage: test
-  script:
-    - npm install
-    - ng build
-  artifacts:
-    paths:
-    - dist/
 
 #deploy build production
 deploy:
