@@ -60,6 +60,9 @@ gitlab-runner run
 TO SOLVE ISSUES WITH RSA KEYS:
 ###########################
 
+FIRST CHECK FOR ACCESS AUTH:
+ssh -T git@github.com
+
 1) cat $HOME/.ssh/id_rsa.pub
 2) COPY PUBLIC KEY TO SERVER cat ~/.ssh/id_rsa.pub | pbcopy (copy to clipboard)
 3) REMOVE CURRENT KEY FROM
