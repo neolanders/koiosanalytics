@@ -56,6 +56,8 @@ vi /Users/eric.alter/.gitlab-runner/config.toml
 TO RUN:
 gitlab-runner run
 
+
+
 ###########################
 TO SOLVE ISSUES WITH RSA KEYS:
 ###########################
@@ -69,4 +71,8 @@ ssh -T git@github.com
    sudo vi /var/root/.ssh/known_hosts
 4) TRY RECONNECT WITH SSH (OR GIT PULL)
 
+###########################
+RESTART PROCESS CHROME (MAC)
+###########################
 
+killall -9 "Google Chrome".
