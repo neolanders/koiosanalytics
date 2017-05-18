@@ -31,7 +31,7 @@ deploy:
   stage: deploy
   script:
     - npm install
-    - ng build --prod
+    - npm run dev
   artifacts:
     paths:
     - dist/

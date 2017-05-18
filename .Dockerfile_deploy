@@ -1,0 +1,69 @@
+##########################
+RASPBERRY DOCKER:
+##########################
+
+REMOVE ALL LINES:
+:1,$d
+
+
+
+# FROM resin/rpi-raspbian:jessie
+FROM hypriot/rpi-node:latest
+
+LABEL Name=koiosanalytics Version=0.1.0
+COPY package.json /tmp/package.json
+
+#RUN ls
+RUN npm config set registry https://registry.npmjs.org/
+RUN cd /tmp && npm i -g --unsafe-perm @angular/cli cordova ionic@beta typescript sleep-ms concurrently mkdirp && npm install --unsafe-perm
+RUN mkdir -p /usr/src/app && mv /tmp/node_modules /usr/src/app
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+
+
+#Launch server
+EXPOSE 5443
+CMD ["npm", "run", "dev"]
+
+##########################
+MODIFY GIT CONFIG:
+##########################
+vi $HOME/.gitconfig
+
+[remote "origin"]
+    url = git@github.com:neolanders/koiosanalytics.git
+    pushURL = git@github.com:neolanders/koiosanalytics.git
+    pushURL = git@heroku.com:neolanders/koiosanalytics.git
+    pushURL = git@gitlab.com:neolanders/koiosanalytics.git
+
+###########################
+CONFIGURE GITLAB RUNNERS:
+###########################
+
+vi /Users/eric.alter/.gitlab-runner/config.toml
+
+
+[[runners]]
+  name = "koiosanalytics"
+  url = "https://gitlab.com/ci"
+  token = "hn_9B3QZo4mg3aQkPjY1"
+  limit = 2
+  executor = "shell"
+  builds_dir = ""
+  shell = "bash"
+
+
+TO RUN:
+gitlab-runner run
+
+###########################
+TO SOLVE ISSUES WITH RSA KEYS:
+###########################
+
+1) cat $HOME/.ssh/id_rsa.pub
+2) COPY PUBLIC KEY TO SERVER cat ~/.ssh/id_rsa.pub | pbcopy (copy to clipboard)
+3) REMOVE CURRENT KEY FROM
+   sudo vi /var/root/.ssh/known_hosts
+4) TRY RECONNECT WITH SSH (OR GIT PULL)
+
+
