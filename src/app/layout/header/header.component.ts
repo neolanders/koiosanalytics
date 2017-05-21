@@ -11,10 +11,10 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input, AfterCo
 export class HeaderComponent {
 
   @Input() public showLeftMenuButton?: boolean = true;
-
   @Input() public showRightMenuButton?: boolean = true;
 
-  constructor(public leftMenuService: LeftMenuService, public rightMenuService: RightMenuService) {
+  constructor(public leftMenuService: LeftMenuService,
+              public rightMenuService: RightMenuService) {
   }
 
   toggleMenu() {
@@ -24,5 +24,4 @@ export class HeaderComponent {
   toggleRightMenu() {
     this.rightMenuService.toggleMenu();
   }
-
 }

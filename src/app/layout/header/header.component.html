@@ -15,10 +15,9 @@
   <koios-menu-item link="['/protected']" title="Protected" icon="analytics"></koios-menu-item>
   <!--<ng-content></ng-content>-->
   <ion-buttons end>
-    <koios-userinfo summary="true" [hidden]="canShowUserComponentInHeader"></koios-userinfo>
-    <button invisible-to="mobile" [hidden]="canShowUserComponentInHeader" ion-button (click)="presentPopover($event)">
+    <koios-userinfo summary="true"></koios-userinfo>
+    <button invisible-to="mobile" ion-button>
       <ion-icon name="person"></ion-icon>
-      {{name}}
     </button>
   </ion-buttons>
 </ion-navbar>

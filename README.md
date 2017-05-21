@@ -209,6 +209,10 @@ git push heroku master
 
 https://g.codefresh.io/environments/
 
+### PIPELINE AND TEST AND DEPLOY USING GITLAB (Support docker)
+
+https://gitlab.com/neolanders/koiosanalytics/builds/16673573
+
 
 https://cf-aue1-docker-node-0053.cf-cd.com:32940/#/dashboard (URL DEPLOY)
 

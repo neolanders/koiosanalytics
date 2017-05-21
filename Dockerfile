@@ -1,4 +1,3 @@
-
 FROM node:latest
 ARG registry=https://registry.npmjs.org/
 LABEL Name=koiosanalytics Version=0.1.0

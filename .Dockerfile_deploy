@@ -40,22 +40,58 @@ vi $HOME/.gitconfig
 CONFIGURE GITLAB RUNNERS:
 ###########################
 
+DOC:
+https://gitlab.com/gitlab-org/gitlab-ci-multi-runner/blob/master/docs/install/osx.md
+
+Get Key Runner:
+https://gitlab.com/neolanders/koios-analytics/settings/ci_cd
+
+REGISTER RUNNER FIRST:
+gitlab-runner register
+sudo gitlab-ci-multi-runner register
+
+gitlab-runner register --name koios-analytics --url http://gitlab.example.com --registration-token ed5715455a89e577ca0f6894a8c5aa
+
+
+
 vi /Users/eric.alter/.gitlab-runner/config.toml
 
+Projects:
 
-[[runners]]
-  name = "koiosanalytics"
-  url = "https://gitlab.com/ci"
-  token = "hn_9B3QZo4mg3aQkPjY1"
-  limit = 2
-  executor = "shell"
-  builds_dir = ""
-  shell = "bash"
+https://gitlab.com (url)
+hn_9B3QZo4mg3aQkPjY1 (token)
+koiosanalytics (local)
+docker
+node:latest (image)
+
+
+
+-----
+
+koios-analytics
+
 
 
 TO RUN:
 gitlab-runner run
 
+
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  name = "koiosanalytics"
+  url = "https://gitlab.com"
+  token = "bcc538f523481406f14264f0efd9d9"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "node:latest"
+    privileged = false
+    disable_cache = false
+    volumes = ["/cache"]
+    shm_size = 0
+  [runners.cache]
 
 
 ###########################
