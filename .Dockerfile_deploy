@@ -112,3 +112,10 @@ RESTART PROCESS CHROME (MAC)
 ###########################
 
 killall -9 "Google Chrome".
+
+
+
+
+
+git fetch -v origin
+git merge origin
